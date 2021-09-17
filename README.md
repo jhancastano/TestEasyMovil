@@ -13,10 +13,32 @@ DATABASES = {
 }
 
 ```
+### Crear virtualenv 
+```
+virtualenv envEasyMovil --python=python3
+```
+### Inicializar entorno virtual
+```
+source envEasyMovil/bin/activate  
+```
+### Copiar repositorio
+```
+git clone https://github.com/jhancastano/TestEasyMovil.git
+``` 
+### Instalar dependecias
+```
+pip install -r requirements.txt
+```
 
-
-
+#### Crear migraciones y un superusuario
 ``` 
 python manage.py migrate
 python manage.py createsuperuser 
+python manage.py runserver
 ```
+
+
+luego de crear super usuario para gestionar usuarios abrir localhost:8000/admin 
+
+
+obtener el token http://localhost:8000/api/token/
